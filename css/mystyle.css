@@ -1,0 +1,363 @@
+body {
+    font-family: Lato, sans-serif;
+    background-image: url(../images/floralbgbottom.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom right;
+    background-size: 50%;
+}
+
+@media (min-width: 992px) {
+    body {
+        background-size: 25%;
+    }
+}
+
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 900;
+}
+
+h3, h4 {
+    font-weight: 700;
+}
+
+.pageheader {
+    padding: 1em;
+    text-align: center;
+}
+
+input.form-control, textarea.form-control {
+    border: 2px solid #A0D94A;
+}
+
+/* ==================================================
+Header Nav Styles */
+
+header nav {
+    font-weight: 700;
+    font-family: Lato, sans-serif;
+}
+
+header nav #navbarSupportedContent .nav-link {
+    color: #707070;
+}
+
+header nav #navbarSupportedContent .nav-link:hover {
+    color: #FFF;
+    background-color: #A0D94A;
+}
+
+header nav #navbarSupportedContent .active {
+    color: #A0D94A;
+}
+
+
+header nav #navbarSupportedContent .fa-solid:hover {
+    color: #A0D94A;
+    background: none;
+}
+
+/* ==================================================
+Footer Styles */
+
+footer #footernav .nav-link {
+    color: #707070;
+}
+
+footer #social .nav-link {
+    color: #A0D94A;
+}
+
+
+
+/* ==================================================
+Testimonial Styles */
+
+#tm .fa-2xl {
+    font-size: 4em;
+}
+
+/* ==================================================
+Store Styles */
+
+#store .card-title {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+/* ==================================================
+About Page Styles */
+
+.about-cards .card {
+    border: 2px solid #467326;
+    border-radius: 20px;
+}
+
+.about-cards .card-header {
+    background-color: #A0D94A;
+    color: #467326;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+}
+
+
+
+
+/* ==================================================
+Calendar Styles */
+
+.calendar ol::after {
+    content: ".";
+    height: 0;
+    clear:both;
+    visibility: hidden;
+}
+
+.calblock > li > ul {
+    padding: 1rem;
+}
+
+.calblock > li > ul  li {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.calblock > li > ul li:hover {
+    animation-name: stretch;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out; 
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;    
+}
+
+@keyframes stretch {
+    0% {
+        transform: scale(1);
+    }
+    
+    100% {
+        transform: scale(1.2)
+    }
+}
+
+.cal2 {
+    height: 6rem;
+}
+
+.cal3 {
+    height: 9rem;
+}
+
+.cal4 {
+    height: 12rem;
+}
+
+.mt {
+    background-color: #CEE4EE;
+    border: 2px solid #83CAEB;
+}
+
+.act {
+    background-color: #F5E7F4;
+    border: 2px solid #E98FE3;
+}
+
+.vp {
+    background-color: #FFFFD5;
+    border: 2px solid #D6D612;
+}
+
+.calblock h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: none;
+}
+
+.calblock p {
+    font-size: .8rem;
+}
+
+.schedule ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.scheduleheader {
+    display: none;
+    visibility: hidden;
+}
+
+.schedule ul li ul li {
+    padding: .4rem 3rem;
+    text-align: center;
+}
+
+.schedule .list-group-item {
+    background: none;
+    border: 0;
+}
+
+.schedule ul li ul div:nth-of-type(1) li {
+    background-color: #A0D94A;
+    border: 1px solid #467326;
+    padding: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+
+/* Content modifications for Mobile */
+.schedule ul li ul div:nth-of-type(2) li:nth-of-type(1) span::before {content: "at ";}
+.schedule ul li ul div:nth-of-type(2) li:nth-of-type(2)::before {content: "Starting: ";}
+.schedule ul li ul div:nth-of-type(2) li:nth-of-type(2) span::before {content: ", ";}
+.schedule ul li ul div:nth-of-type(2) li:nth-of-type(3)::before{content: "Show Dates: ";}
+.schedule ul li ul div:nth-of-type(2) li:nth-of-type(3) span::before {content: " at ";}
+.schedule ul li ul div:nth-of-type(2) li:nth-of-type(4)::before {content: "Teachers: ";}
+
+.monthcal ol {
+  counter-reset: orderedlist;
+}
+
+.monthcal ol li::before {
+  counter-increment: orderedlist;
+  content: counter(orderedlist);
+}
+
+.blank {
+    border: 1px solid white;
+    padding: .25rem;
+}
+
+.day {
+    min-height: 5rem;
+    padding: .25rem;
+    border: 1px solid #ddd;
+    list-style-position: inside;
+}
+
+@media (min-width: 992px) {
+    .calendar {
+        border-radius: 32px;
+        background-color: #E8FBCA;
+    }
+    
+    .calhead > li {
+        border: none;
+        width: 25%;
+    }
+    
+    .calblock > li:not(:last-child) {
+        border-right: 1px dotted #000;
+    }
+    
+    .scheduleheader {
+        display:flex;
+        visibility: visible;
+    }
+    
+    .schedule > ul {
+        border: 3px solid #467326;
+        border-radius: 32px;
+    }
+    
+    .schedule ul li ul {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .schedule ul li ul li {
+        padding: 1rem;
+        width: 9rem;
+    }
+    
+    .schedule ul li ul div:nth-of-type(1) li {
+        width: 18rem;
+        text-align: left;
+        background: none;
+        border: none;
+    }
+    
+    .schedule ul li ul div:nth-of-type(1) a {
+        cursor: default;
+    }
+    
+    .schedule > ul > li:nth-of-type(even) {
+        background-color: rgba(178,242,82,0.3)
+    }
+    
+    .schedule ul li ul li:nth-last-of-type(1) {
+        width: 12rem;
+    }
+    
+    .schedule ul li ul li span {
+        display: block;
+    }
+    
+    .schedule .list-group-item {
+        background: none;
+        border: 0;
+    }
+    
+    .calhead button {
+        display: none;
+    }
+    
+    #monday, #tuesday, #wednesday, #thursday {
+        display: list-item;
+    }
+    
+    .schedule ul li ul div:nth-of-type(2) li:nth-of-type(1) span::before {content: "";}
+    .schedule ul li ul div:nth-of-type(2) li:nth-of-type(2)::before {content: "";}
+    .schedule ul li ul div:nth-of-type(2) li:nth-of-type(2) span::before {content: "";}
+    .schedule ul li ul div:nth-of-type(2) li:nth-of-type(3)::before{content: "";}
+    .schedule ul li ul div:nth-of-type(2) li:nth-of-type(3) span::before {content: "";}
+    .schedule ul li ul div:nth-of-type(2) li:nth-of-type(4)::before {content: "";}
+    
+    #mtaccordion .collapse:not(.show), #acaccordion .collapse:not(.show), #vpaccordion .collapse:not(.show) {
+        display:flex;
+    }
+    
+    .blank {
+        border: 1px solid white;
+        padding: 1rem;
+    }
+    
+    .day {
+        min-height: 8rem;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        list-style-position: inside;
+    }
+    
+    .event {
+        border-radius: 1rem;
+        font-size: .8rem;
+        max-width: 100%;
+    }
+}
+
+.waitlist {
+    text-transform: uppercase;
+    color: #A0D94A;
+    padding: .5rem 2rem;
+    background-color: #79A637;
+    border: 1px solid #467326;
+    border-radius: 8px;
+}
+
+.register {
+    text-transform: uppercase;
+    color: #467326;
+    padding: .5rem 2rem;
+    background-color: #B2F252;
+    border: 1px solid #A0D94A;
+    border-radius: 8px;
+}
