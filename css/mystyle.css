@@ -35,6 +35,17 @@ input.form-control, textarea.form-control {
     border: 2px solid #A0D94A;
 }
 
+.btn-green {
+    color: #fff;
+    background-color: #79A637;
+    border-color: #79A637;
+}
+
+button, .btn {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 /* ==================================================
 Header Nav Styles */
 
@@ -43,23 +54,75 @@ header nav {
     font-family: Lato, sans-serif;
 }
 
+header nav #navbarSupportedContent ul > li.nav-item {
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 2.5;
+    background-color: #A0D94A;
+}
+
+header nav #navbarSupportedContent ul > li.nav-item ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+header nav #navbarSupportedContent ul > li.nav-item ul .nav-item {
+    width:30%;
+}
+
+header nav #navbarSupportedContent ul > li.nav-item ul .nav-item a {
+    width:100%;
+}
+
 header nav #navbarSupportedContent .nav-link {
     color: #707070;
 }
 
-header nav #navbarSupportedContent .nav-link:hover {
+header nav #navbarSupportedContent .nav-link:active, header nav #navbarSupportedContent .active {
     color: #FFF;
-    background-color: #A0D94A;
+    background-color: #79A637;
 }
 
-header nav #navbarSupportedContent .active {
-    color: #A0D94A;
+header nav #navbarSupportedContent .fa-solid:active {
+    color: #FFF;
+    background-color: transparent;
 }
 
+header nav .navbar-toggler {
+    border: 1px solid #707070;
+}
 
-header nav #navbarSupportedContent .fa-solid:hover {
-    color: #A0D94A;
-    background: none;
+header nav .navbar-toggler-icon {
+    line-height: 1.5;
+}
+
+@media (min-width: 992px) {
+    
+    header nav #navbarSupportedContent ul > li.nav-item {
+        display: list-item;
+        width: auto;
+        background-color: transparent;
+    }
+    
+    header nav #navbarSupportedContent .nav-link {
+        background-color: transparent;
+    }
+
+    header nav #navbarSupportedContent .nav-link:hover {
+        color: #FFF;
+        background-color: #A0D94A;
+    }
+
+    header nav #navbarSupportedContent .active {
+        color: #A0D94A;
+    }
+
+
+    header nav #navbarSupportedContent .fa-solid:hover {
+        color: #A0D94A;
+        background: none;
+    }
 }
 
 /* ==================================================
